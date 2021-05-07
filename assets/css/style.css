@@ -1,0 +1,116 @@
+/* Global ========================================================== */
+:root {
+  --gray: #e1dfdf;
+  --yellow: #f3af00;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Links ========================================================== */
+a {
+  text-decoration: none;
+}
+
+/* Header ========================================================== */
+header {
+  width: 100vw;
+  height: 100vh;
+
+  background: url(../img/fundo-header-blur.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+/* Menu ========================================================== */
+header .general-box {
+  width: 100%;
+  background-color: #000;
+}
+
+header .general-box .menu-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+}
+
+#logo h4 {
+  color: var(--gray);
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links ul li a {
+  color: var(--gray);
+
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links .social-networks {
+  margin: 0 0 0 1.5rem;
+}
+
+.nav-links .social-networks a {
+  color: var(--gray);
+
+  font-size: 1.2rem;
+  margin: 0 0.7rem;
+}
+
+.nav-links ul li a:hover,
+.nav-links .social-networks a:hover {
+  color: var(--yellow);
+  transition: 0.3s;
+}
+
+.nav-links ul li a.active {
+  color: var(--yellow);
+}
+
+/* Introduction ========================================================== */
+header .introduction {
+  width: 80%;
+  margin: 30vh auto;
+}
+
+header .introduction h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+
+  color: var(--yellow);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .introduction h3 {
+  font-weight: 600;
+  font-size: 2rem;
+
+  color: var(--gray);
+
+  margin-top: 1.3rem;
+}
+
+/* Responsive ========================================================== */
+@media (max-width: 1199px) {
+  header .general-box .menu-box {
+    width: 90%;
+  }
+}
