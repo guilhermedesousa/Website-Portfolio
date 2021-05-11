@@ -13,10 +13,7 @@
 }
 
 @media (max-width: 899px) {
-  body {
-    overflow-x: hidden;
-  }
-
+  /* Menu =========================================================== */
   .nav-links .social-networks {
     display: none;
   }
@@ -44,6 +41,27 @@
   .mobile-menu {
     display: block;
     cursor: pointer;
+  }
+
+  /* About =========================================================== */
+
+  #myInformations {
+    display: block;
+    text-align: center;
+  }
+
+  #myInformations img {
+    width: 40vw;
+    margin-bottom: 4rem;
+  }
+
+  #description {
+    width: 100%;
+    text-align: left;
+  }
+
+  #skills .logo-box {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -78,5 +96,13 @@
 @media (max-width: 599px) {
   .introduction {
     text-align: center;
+  }
+
+  #skills .logo-box {
+    grid-template-columns: 1fr;
+  }
+
+  #skills img {
+    width: 40vw;
   }
 }
