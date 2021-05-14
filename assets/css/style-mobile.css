@@ -14,6 +14,10 @@
 
 @media (max-width: 899px) {
   /* Menu =========================================================== */
+  header .general-box {
+    background-color: #000;
+  }
+
   .nav-links .social-networks {
     display: none;
   }
@@ -51,7 +55,7 @@
   }
 
   #myInformations img {
-    width: 40vw;
+    width: 35vw;
     margin-bottom: 4rem;
   }
 

@@ -37,10 +37,14 @@ header {
 /* Menu ========================================================== */
 header .general-box {
   width: 100%;
-  background-color: #000;
   position: fixed;
   /* top: 0; */
   z-index: 999;
+  transition: 0.5s;
+}
+
+header .general-box.black {
+  background-color: #000;
 }
 
 header .general-box .menu-box {
@@ -59,6 +63,7 @@ header .general-box .menu-box {
   font-weight: 700;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
+  transition: 0.5s;
 }
 
 .nav-links {
@@ -76,6 +81,7 @@ header .general-box .menu-box {
   margin: 0 1.5rem;
   font-size: 0.9rem;
   font-weight: 500;
+  transition: 0.5s;
 }
 
 .nav-links .social-networks {
@@ -87,16 +93,13 @@ header .general-box .menu-box {
 
   font-size: 1.2rem;
   margin: 0 0.7rem;
+  transition: 0.5s;
 }
 
 .nav-links ul li a:hover,
 .nav-links .social-networks a:hover {
   color: var(--yellow);
   transition: 0.3s;
-}
-
-.nav-links ul li a.active {
-  color: var(--yellow);
 }
 
 /* Introduction ========================================================== */
@@ -181,7 +184,7 @@ header .introduction h3 {
 
 #myInformations {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -234,7 +237,7 @@ header .introduction h3 {
 } */
 
 #skills img {
-  height: 25vh;
+  height: 20vh;
 }
 
 #skills h5 {
@@ -264,10 +267,45 @@ header .introduction h3 {
   width: 425px;
   box-shadow: 3px 3px 15px #000;
   margin: 1.5rem;
+
+  position: relative;
 }
 
 .projectCards .card img {
   width: 100%;
+  transition: 0.5s ease;
+}
+
+.projectCards .card .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.projectCards .card .middle h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.projectCards .card .middle a {
+  text-decoration: none;
+  font-size: 2em;
+  color: #fff;
+  margin: 0 0.2em;
+}
+
+.projectCards .card:hover img {
+  opacity: 0.3;
+}
+
+.projectCards .card:hover .middle {
+  opacity: 1;
 }
 
 /* Section CONTACT ========================================================== */
@@ -289,7 +327,7 @@ header .introduction h3 {
 
 #contact .contact-informations div {
   margin: 1.5rem;
-  font-size: 6rem;
+  font-size: 4rem;
   text-align: center;
   color: var(--yellow);
 }
@@ -300,10 +338,15 @@ header .introduction h3 {
   margin: 1rem 0;
 }
 
-#contact .contact-informations div h6 {
+#contact .contact-informations div h6,
+#contact .contact-informations div a {
   font-size: 1rem;
   font-weight: 400;
   color: var(--gray);
+}
+
+#contact .contact-informations div a {
+  text-decoration: underline;
 }
 
 /* Footer ========================================================== */
@@ -334,6 +377,21 @@ footer .content-box div a {
   margin: 1rem;
 }
 
+footer .content-box div a .fa-instagram:hover {
+  color: #c13584;
+  transition: 0.5s;
+}
+
+footer .content-box div a .fa-github:hover {
+  color: gray;
+  transition: 0.5s;
+}
+
+footer .content-box div a .fa-linkedin-in:hover {
+  color: #0e76a8;
+  transition: 0.5s;
+}
+
 footer .content-box p {
   font-size: 0.8rem;
   color: var(--gray);
@@ -344,5 +402,9 @@ footer .content-box p {
   header .general-box .menu-box,
   .content-box {
     width: 90%;
+  }
+
+  #myInformations img {
+    width: 25vw;
   }
 }
