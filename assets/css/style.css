@@ -10,9 +10,22 @@ body {
   overflow-x: hidden;
 }
 
+.content-box {
+  width: 80%;
+  margin: auto;
+}
+
 /* Links & Titles ========================================================== */
 a {
   text-decoration: none;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: oblique;
 }
 
 .title {
@@ -30,16 +43,12 @@ a {
   color: var(--yellow);
 }
 
-b {
-  font-weight: bold;
-}
-
 /* Header ========================================================== */
 header {
   width: 100vw;
   height: 100vh;
 
-  background: url(../img/fundo-header-blur2.jpg) no-repeat center top;
+  background: url(../img/background-header.jpg) no-repeat center top;
   background-size: cover;
 }
 
@@ -47,7 +56,7 @@ header {
 header .general-box {
   width: 100%;
   position: fixed;
-  /* top: 0; */
+
   z-index: 999;
   transition: 0.5s;
 }
@@ -57,21 +66,21 @@ header .general-box.black {
 }
 
 header .general-box .menu-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 80%;
   height: 10vh;
   margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #logo h4 {
-  color: var(--gray);
-
+  font-size: 1.8em;
   font-weight: 700;
-  font-size: 1.8rem;
   letter-spacing: 0.2rem;
+
+  color: var(--gray);
   transition: 0.5s;
 }
 
@@ -85,11 +94,11 @@ header .general-box .menu-box {
 }
 
 .nav-links ul li a {
-  color: var(--gray);
-
-  margin: 0 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 500;
+  margin: 0 1.5rem;
+
+  color: var(--gray);
   transition: 0.5s;
 }
 
@@ -98,15 +107,14 @@ header .general-box .menu-box {
 }
 
 .nav-links .social-networks a {
-  color: var(--gray);
-
-  font-size: 1.2rem;
+  font-size: 1.2em;
   margin: 0 0.7rem;
+
+  color: var(--gray);
   transition: 0.5s;
 }
 
-.nav-links ul li a:hover,
-.nav-links .social-networks a:hover {
+.nav-links a:hover {
   color: var(--yellow);
   transition: 0.3s;
 }
@@ -114,13 +122,13 @@ header .general-box .menu-box {
 /* Introduction ========================================================== */
 header .introduction {
   width: 80%;
-  margin: 0px auto;
+  margin: auto;
   display: flex;
 }
 
 header .introduction h1 {
+  font-size: 3em;
   font-weight: 600;
-  font-size: 3rem;
   line-height: 3rem;
   margin-top: 40vh;
 
@@ -129,22 +137,21 @@ header .introduction h1 {
 }
 
 header .introduction h3 {
+  font-size: 2em;
   font-weight: 600;
-  font-size: 2rem;
+  margin-top: 1.3rem;
 
   color: var(--gray);
-
-  margin-top: 1.3rem;
 }
 
 header .introduction h3::after {
   content: "|";
   margin-left: 0.2em;
   opacity: 1;
-  animation: pisca 0.8s infinite;
+  animation: blink 0.8s infinite;
 }
 
-@keyframes pisca {
+@keyframes blink {
   0%,
   100% {
     opacity: 1;
@@ -162,7 +169,6 @@ header .introduction h3::after {
 }
 
 /* Animation scroll */
-
 .arrow span {
   display: block;
   width: 30px;
@@ -203,11 +209,6 @@ header .introduction h3::after {
   background-color: var(--dark-gray);
 }
 
-.content-box {
-  width: 80%;
-  margin: auto;
-}
-
 #myInformations {
   display: flex;
   justify-content: space-between;
@@ -216,7 +217,7 @@ header .introduction h3::after {
 
 #myInformations img {
   width: 20vw;
-  border-radius: 240px;
+  border-radius: 200px;
   box-shadow: 3px 3px 15px #000;
   transition: 0.3s ease-in-out;
 }
@@ -227,19 +228,14 @@ header .introduction h3::after {
 
 #description {
   width: 50vw;
-  background-color: var(--yellow);
-}
-
-#description div {
-  height: 100%;
   padding: 2em;
-  background-color: var(--dark-gray);
+  box-sizing: border-box;
   border: 1px solid var(--yellow);
-  margin: 20px 20px -20px -20px;
+  box-shadow: 20px -20px 0px var(--yellow);
 }
 
 #description h2 {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 500;
   margin-bottom: 1rem;
 
@@ -247,7 +243,7 @@ header .introduction h3::after {
 }
 
 #description p {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.8rem;
   margin-bottom: 1rem;
@@ -267,13 +263,13 @@ header .introduction h3::after {
 
 #skills .logo-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   grid-gap: 3rem;
 }
 
 #skills img {
-  height: 20vh;
+  height: 15vh;
   transition: 0.3s ease-in-out;
 }
 
@@ -282,11 +278,12 @@ header .introduction h3::after {
 }
 
 #skills h5 {
-  font-size: 1.2rem;
+  font-size: 1.1em;
   font-weight: 700;
-  color: var(--gray);
   text-align: center;
   margin-top: 0.8rem;
+
+  color: var(--gray);
 }
 
 /* Section PROJECTS ========================================================== */
@@ -306,10 +303,10 @@ header .introduction h3::after {
 
 .projectCards .card {
   width: 425px;
-  box-shadow: 3px 3px 15px #000;
   margin: 1.5rem;
-
   position: relative;
+
+  box-shadow: 3px 3px 15px #000;
 }
 
 .projectCards .card img {
@@ -318,36 +315,39 @@ header .introduction h3::after {
 }
 
 .projectCards .card .middle {
-  transition: 0.5s ease;
-  opacity: 0;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
 
-.projectCards .card .fa-tools {
-  color: #fff;
-  position: absolute;
-  bottom: 0.5em;
-  right: 0.5em;
-  transition: 0.5s ease;
   opacity: 0;
+  transition: 0.5s ease;
 }
 
 .projectCards .card .middle h2 {
   font-size: 1.2em;
   font-weight: 500;
   margin-bottom: 1em;
+
   color: #fff;
 }
 
 .projectCards .card .middle a {
-  text-decoration: none;
-  font-size: 2em;
-  color: #fff;
+  font-size: 1.8em;
   margin: 0 0.2em;
+
+  color: #fff;
+}
+
+.projectCards .card .fa-tools {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
 .projectCards .card:hover img {
@@ -377,9 +377,10 @@ header .introduction h3::after {
 }
 
 #contact .contact-informations div {
-  margin: 1.5rem 3rem;
-  font-size: 4rem;
+  font-size: 4em;
   text-align: center;
+  margin: 1.5rem 3rem;
+
   color: var(--yellow);
 }
 
@@ -393,6 +394,7 @@ header .introduction h3::after {
 #contact .contact-informations div a {
   font-size: 1rem;
   font-weight: 400;
+
   color: var(--gray);
 }
 
@@ -411,7 +413,7 @@ header .introduction h3::after {
 /* Footer ========================================================== */
 footer {
   padding: 2rem 0;
-  background: #000;
+  background-color: #000;
 }
 
 footer .content-box {
@@ -421,8 +423,9 @@ footer .content-box {
 }
 
 footer .content-box h5 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 500;
+
   color: var(--gray);
 }
 
@@ -432,27 +435,29 @@ footer .content-box div {
 
 footer .content-box div a {
   font-size: 1.2rem;
-  color: #fff;
   margin: 1rem;
+
+  color: #fff;
+}
+
+footer .content-box div a i {
+  transition: 0.5s;
 }
 
 footer .content-box div a .fa-instagram:hover {
   color: #c13584;
-  transition: 0.5s;
 }
 
 footer .content-box div a .fa-github:hover {
   color: gray;
-  transition: 0.5s;
 }
 
 footer .content-box div a .fa-linkedin-in:hover {
   color: #0e76a8;
-  transition: 0.5s;
 }
 
 footer .content-box p {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   color: var(--gray);
 }
 
@@ -480,11 +485,11 @@ footer .content-box p {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+  transition: 0.5s;
 }
 
 .scrollUp:hover {
   transform: scale(1.1);
-  transition: 0.5s;
 }
 
 /* Responsive ========================================================== */
@@ -496,5 +501,13 @@ footer .content-box p {
 
   #myInformations img {
     width: 25vw;
+  }
+
+  #description {
+    box-shadow: 10px -10px 0px var(--yellow);
+  }
+
+  .scrollUp {
+    right: 1em;
   }
 }

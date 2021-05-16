@@ -1,8 +1,3 @@
-// Identificar o clique no menu
-// Verificar o item que foi clicado e fazer referência com o alvo
-// Verificar a distância entre o alvo e o topo
-// Animar o scroll até o alvo
-
 // Scroll nav-links ======================================================
 $('nav ul a').click(function(e){
     e.preventDefault()
@@ -30,7 +25,7 @@ $('.smooth-scroll').on('click', function (e) {
 // Scroll top
 $(document).ready(function() {
     $(window).scroll(function() {
-        if($(window).scrollTop() > 1200) {
+        if($(window).scrollTop() > 1600) {
             $('.scrollUp').css({
                 "opacity":"1", "pointer-events":"auto"
             })

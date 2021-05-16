@@ -1,3 +1,4 @@
+/* Menu "Hamburguer" =========================================================== */
 .mobile-menu {
   display: none;
 }
@@ -7,13 +8,12 @@
   height: 3px;
   margin: 5px;
 
-  background-color: #e1dfdf;
-
+  background-color: var(--gray);
   transition: all 0.3s ease;
 }
 
 @media (max-width: 899px) {
-  /* Menu =========================================================== */
+  /* Menu Navbar =========================================================== */
   header .general-box {
     background-color: #000;
   }
@@ -28,7 +28,7 @@
     top: 10vh;
     height: 50vh;
     width: 100vw;
-    background: #000;
+    background-color: #000;
 
     flex-direction: column;
     align-items: center;
@@ -47,8 +47,7 @@
     cursor: pointer;
   }
 
-  /* About =========================================================== */
-
+  /* Section ABOUT =========================================================== */
   #myInformations {
     display: block;
     text-align: center;
@@ -60,14 +59,12 @@
   }
 
   #description {
-    width: 100%;
+    width: 95%;
+    margin: auto;
     text-align: left;
   }
 
-  #description div {
-    margin: 0;
-  }
-
+  /* Section SKILLS =========================================================== */
   #skills .logo-box {
     grid-template-columns: 1fr 1fr;
   }
@@ -100,18 +97,15 @@
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Phones */
+/* Phones =========================================================== */
 @media (max-width: 599px) {
   .introduction {
     text-align: center;
   }
 
-  #skills .logo-box {
-    grid-template-columns: 1fr;
-  }
-
-  #skills img {
-    width: 40vw;
+  #description {
+    width: 90%;
+    padding: 1em;
   }
 
   .scrollUp {
