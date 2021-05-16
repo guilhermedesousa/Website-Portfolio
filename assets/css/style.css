@@ -16,8 +16,9 @@ a {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.8em;
   font-weight: 600;
+  letter-spacing: 0.1em;
   text-align: center;
   margin-bottom: 4rem;
 
@@ -25,12 +26,20 @@ a {
   color: var(--gray);
 }
 
+.title span {
+  color: var(--yellow);
+}
+
+b {
+  font-weight: bold;
+}
+
 /* Header ========================================================== */
 header {
   width: 100vw;
   height: 100vh;
 
-  background: url(../img/fundo-header-blur.jpg) no-repeat center top;
+  background: url(../img/fundo-header-blur2.jpg) no-repeat center top;
   background-size: cover;
 }
 
@@ -128,6 +137,23 @@ header .introduction h3 {
   margin-top: 1.3rem;
 }
 
+header .introduction h3::after {
+  content: "|";
+  margin-left: 0.2em;
+  opacity: 1;
+  animation: pisca 0.8s infinite;
+}
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .arrow {
   position: absolute;
   top: 90%;
@@ -192,10 +218,24 @@ header .introduction h3 {
   width: 20vw;
   border-radius: 240px;
   box-shadow: 3px 3px 15px #000;
+  transition: 0.3s ease-in-out;
+}
+
+#myInformations img:hover {
+  transform: scale(1.01);
 }
 
 #description {
   width: 50vw;
+  background-color: var(--yellow);
+}
+
+#description div {
+  height: 100%;
+  padding: 2em;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--yellow);
+  margin: 20px 20px -20px -20px;
 }
 
 #description h2 {
@@ -232,12 +272,13 @@ header .introduction h3 {
   grid-gap: 3rem;
 }
 
-/* #skills .logo-box div {
-  border: 1px solid yellow;
-} */
-
 #skills img {
   height: 20vh;
+  transition: 0.3s ease-in-out;
+}
+
+#skills img:hover {
+  transform: scale(1.1);
 }
 
 #skills h5 {
@@ -286,9 +327,18 @@ header .introduction h3 {
   text-align: center;
 }
 
+.projectCards .card .fa-tools {
+  color: #fff;
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
 .projectCards .card .middle h2 {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1em;
   color: #fff;
 }
@@ -304,7 +354,8 @@ header .introduction h3 {
   opacity: 0.3;
 }
 
-.projectCards .card:hover .middle {
+.projectCards .card:hover .middle,
+.projectCards .card:hover .fa-tools {
   opacity: 1;
 }
 
@@ -326,7 +377,7 @@ header .introduction h3 {
 }
 
 #contact .contact-informations div {
-  margin: 1.5rem;
+  margin: 1.5rem 3rem;
   font-size: 4rem;
   text-align: center;
   color: var(--yellow);
@@ -347,6 +398,14 @@ header .introduction h3 {
 
 #contact .contact-informations div a {
   text-decoration: underline;
+}
+
+#contact .contact-informations i {
+  transition: 0.3s ease-in-out;
+}
+
+#contact .contact-informations i:hover {
+  transform: translateY(-10px);
 }
 
 /* Footer ========================================================== */
@@ -395,6 +454,37 @@ footer .content-box div a .fa-linkedin-in:hover {
 footer .content-box p {
   font-size: 0.8rem;
   color: var(--gray);
+}
+
+/* Scroll up */
+.scrollUp {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  cursor: pointer;
+
+  font-size: 1.5em;
+  color: var(--yellow);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--yellow);
+
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 2;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scrollUp:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 /* Responsive ========================================================== */

@@ -64,6 +64,10 @@
     text-align: left;
   }
 
+  #description div {
+    margin: 0;
+  }
+
   #skills .logo-box {
     grid-template-columns: 1fr 1fr;
   }
@@ -108,5 +112,9 @@
 
   #skills img {
     width: 40vw;
+  }
+
+  .scrollUp {
+    display: none;
   }
 }
